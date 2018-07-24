@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img src="../assets/logo.png" alt="logo" class="image">
+            <img src="../assets/logos.jpg" alt="logo" class="image">
             <h1 class="header__title"> CountDown</h1>
         </div>
         <nav class="navbar">
