@@ -1,0 +1,33 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app {
+    height: 100%;
+}
+
+.active {
+    // background-color: #000;
+    box-shadow: 0 0 8px 4px #010107b5;
+}
+
+.footer{
+    background-color: #5CB85C;
+    height: 40px;
+    width: 100%;
+
+    color:#bbb;
+}
