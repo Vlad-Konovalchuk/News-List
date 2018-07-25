@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img src="../assets/logos.jpg" alt="logo" class="image">
+            <!-- <img src="../assets/logos.jpg" alt="logo" class="image"> -->
             <h1 class="header__title"> CountDown</h1>
         </div>
         <nav class="navbar">
@@ -10,7 +10,7 @@
                     <router-link class="header__link"
                         active-class="active"
                         exact
-                        :to="{ name: 'home' }">
+                        to="/">
                         Home
                     </router-link>
                 </li>
@@ -22,14 +22,7 @@
                         About
                     </router-link>
                 </li>
-                <li class="navbar__item">
-                     <router-link class="header__link"
-                        active-class="active"
-                        exact
-                        :to="{ name: 'news' }">
-                        News
-                    </router-link>
-                </li>
+
                 <li class="navbar__item">
                      <router-link class="header__link"
                         active-class="active"
@@ -60,8 +53,7 @@ export default {
         
         &__title{
             color: #fff;
-            font-family: 'Merienda', cursive;
-
+            font-family: 'Merienda', cursive; 
         }
         &__logo{
             display: flex;

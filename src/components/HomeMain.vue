@@ -1,4 +1,4 @@
-<template>
+npm run serve <template>
     <div class="main">
         <div class="news">
             <div class="news__item" v-for='(article,index) in TopNews' :key='`${index}`' v-if="article.urlToImage">
@@ -40,7 +40,6 @@ export default {
             try{
                 const response = await axios.get(`${api.TOP_URL}${api.KEY}`);
                 this.TopNews = response.data.articles;
-                console.log(this.TopNews)
             }
             catch{
                 console.log(error)

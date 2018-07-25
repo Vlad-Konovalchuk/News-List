@@ -7,7 +7,15 @@
                         <router-link class="aside__link"
                         active-class=""
                         exact
-                        :to="{ name: 'about' }">
+                        :to="{ name: 'homemain' }">
+                        All News
+                        </router-link>
+                    </li>
+                    <li class="nav__item">
+                        <router-link class="aside__link"
+                        active-class=""
+                        exact
+                        to="/sources=bbc-news">
                         BBC
                         </router-link>
                     </li>
@@ -15,7 +23,7 @@
                         <router-link class="aside__link"
                         active-class=""
                         exact
-                        :to="{ name: 'about' }">
+                        to="/sources=the-new-york-times">
                         The New York Times
                         </router-link>
                     </li>
@@ -23,31 +31,70 @@
                         <router-link class="aside__link"
                         active-class=""
                         exact
-                        :to="{ name: '' }">
-                        USA Today
-                        </router-link>
-                    </li>
-                    <li class="nav__item">
-                        <router-link class="aside__link"
-                        active-class=""
-                        exact
-                        :to="{ name: '' }">
-                        CNN
-                        </router-link>
-                    </li>
-                    <li class="nav__item">
-                        <router-link class="aside__link"
-                        active-class=""
-                        exact
-                        :to="{ name: '' }"
-                        >
+                        to="/sources=the-washington-post">
                         The Washington Post
                         </router-link>
-                    </li>                
+                    </li>
+                    <li class="nav__item">
+                        <router-link class="aside__link"
+                        active-class=""
+                        exact
+                        to="/sources=cnn">
+                        CNN
+                        </router-link>
+                    </li>           
                 </ul>
             </div>
         </div>
-
+        <div class="aside_tags">
+            <div class="tags__bycategory">
+                <h3 class="tags__title">Choose by category</h3>
+                <div class="tags__links">
+                     <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=business">
+                            Business
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=entertainment">
+                            Entertainment
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=general">
+                            General
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                        to="category=health">
+                            Health
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=science">
+                            Science
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=sports">
+                            Sports
+                    </router-link>
+                    <router-link class="aside__link"
+                            active-class=""
+                            exact
+                            to="category=technology">
+                            Technology
+                    </router-link>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -60,10 +107,11 @@ export default {
 
 <style lang='scss'>
     .aside{
-        background-color: rgb(115, 202, 176);
-        height: 100%;
+        background-color:#c8e1c3a8;
+        min-height: 100%;
         flex-basis: 40%;
         flex: 1;
+        margin-right: auto;
     }
     .nav{
         &__list{
@@ -73,6 +121,28 @@ export default {
         }
         &__item{
             padding: 1.2rem;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+    .tags__title{
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+        font-size: 1.5rem
+    }
+    .tags__links{
+        display: flex;
+        flex-wrap: wrap;
+        .aside__link{
+            display: block;
+            padding: 0.4rem;
+            margin: 0.4rem;
+            color: #ff8c00;
+            background-color: #181515a3;
+            border-radius: 14px;
+            background-color: #181515a3;
+            box-shadow: 6px -2px 6px 2px #0000007a;
         }
     }
 </style>
