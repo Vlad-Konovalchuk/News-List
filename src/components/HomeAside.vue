@@ -109,7 +109,6 @@ export default {
     .aside{
         background-color:#c8e1c3a8;
         min-height: 100%;
-        flex-basis: 40%;
         flex: 1;
         margin-right: auto;
     }
@@ -136,13 +135,18 @@ export default {
         flex-wrap: wrap;
         .aside__link{
             display: block;
-            padding: 0.4rem;
-            margin: 0.4rem;
-            color: #ff8c00;
-            background-color: #181515a3;
+            margin: .4rem;
+            padding: .4rem;
+            background-color: #ff8c00;
             border-radius: 14px;
-            background-color: #181515a3;
-            box-shadow: 6px -2px 6px 2px #0000007a;
+            box-shadow: 1px 1px 8px 0px rgba(0,0,0,.48);
+            color: #1a1a1a;
+            transition: all .3s ease;
+            &:hover{
+                background-color: #bb6c0b;
+                box-shadow: 1px 1px 11px 3px rgba(0,0,0,.48);
+                color: #fff;
+            }
         }
     }
 </style>
