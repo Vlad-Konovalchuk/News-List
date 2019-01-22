@@ -28,6 +28,7 @@ export default {
         display: flex;
         min-height: 100%;
         .main{
+            flex:3
             margin: 0.3rem;
             min-height: 100%;
         }
