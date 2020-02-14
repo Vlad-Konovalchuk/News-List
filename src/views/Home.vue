@@ -1,34 +1,37 @@
 <template>
     <div class="app-container">
-        <section class="main"> 
+        <section class="main">
+            <categories-filter></categories-filter>
             <router-view></router-view>
         </section>
-        <home-aside ></home-aside>
     </div>
 </template>
 
 
 <script>
-import HomeAside from '@/components/HomeAside.vue'
-import HomeMain from '@/components/HomeMain.vue'
-import Article from '@/views/Article.vue'
+    import HomeAside from '@/components/HomeAside.vue'
+    import HomeMain from '@/components/HomeMain.vue'
+    import CategoriesFilter from '@/components/CategoriesFilter.vue'
+    import Article from '@/views/Article.vue'
 
-export default {
-    name:'Home',
-    components:{
-        HomeMain,
-        HomeAside
+    export default {
+        name: 'Home',
+        components: {
+            HomeMain,
+            HomeAside,
+            CategoriesFilter
+        }
     }
-}
 </script>
 
 
 <style lang='scss'>
-    .app-container{
+    .app-container {
         display: flex;
         min-height: 100%;
-        .main{
-            flex:3;
+
+        .main {
+            flex: 3;
             margin: 0.3rem;
             min-height: 100%;
         }

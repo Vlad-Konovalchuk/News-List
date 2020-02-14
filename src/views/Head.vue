@@ -1,38 +1,39 @@
 <template>
-    <div class="header">
-        <v-toolbar dark app>
-            <v-toolbar-title class="header__title">CountDown</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-app-bar-nav-icon
-                    @click.stop="drawer = !drawer"
-                    class="hidden-md-and-up"
-            ></v-app-bar-nav-icon>
-            <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn
-                        v-for="item in menu"
-                        :key="item.icon"
-                        :to="item.link"
-                        flat
-                >{{ item.title }}
-                </v-btn>
-            </v-toolbar-items>
-            <v-menu class="hidden-md-and-up">
-                <v-list>
-                    <v-list-tile v-for="item in menu" :key="item.title">
-                        <v-list-tile-content>
-                            <v-list-tile-title>
-                                <router-link class="header__link"
-                                             active-class="active"
-                                             exact
-                                             :to="item.route">
-                                    {{ item.title }}
-                                </router-link>
-                            </v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                </v-list>
-            </v-menu>
-        </v-toolbar>
+    <header class="header">
+        <app-navigation></app-navigation>        <!--        <v-toolbar dark app>
+                    <v-toolbar-title class="header__title">CountDown</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-app-bar-nav-icon
+                            @click.stop="drawer = !drawer"
+                            class="hidden-md-and-up"
+                    ></v-app-bar-nav-icon>
+                    <v-toolbar-items class="hidden-sm-and-down">
+                        <v-btn
+                                v-for="item in menu"
+                                :key="item.title"
+                                :to="item.link"
+                        >
+
+                                {{ item.title }}
+                        </v-btn>
+                    </v-toolbar-items>
+                    <v-menu class="hidden-md-and-up">
+                        <v-list>
+                            <v-list-tile v-for="item in menu" :key="item.title">
+                                <v-list-tile-content>
+                                    <v-list-tile-title>
+                                        <router-link class="header__link"
+                                                     active-class="active"
+                                                     exact
+                                                     :to="item.route">
+                                            {{ item.title }}
+                                        </router-link>
+                                    </v-list-tile-title>
+                                </v-list-tile-content>
+                            </v-list-tile>
+                        </v-list>
+                    </v-menu>
+                </v-toolbar>-->
         <!--<div class="header__logo">
             <img src="../assets/logos.jpg" alt="logo" class="image">
             <h1 class="header__title">CountDown</h1>
@@ -65,7 +66,7 @@
                 </li>
             </ul>
         </nav>-->
-    </div>
+    </header>
     <!--    <v-app-bar
                 color="deep-purple accent-4"
                 dense
@@ -111,8 +112,13 @@
 </template>
 
 <script>
+    import AppNavigation from '@/components/AppNavigation'
+
     export default {
         name: 'head',
+        components: {
+            AppNavigation,
+        },
         data() {
             return {
                 drawer: false,
@@ -134,61 +140,5 @@
 <style lang='scss'>
     @import url('https://fonts.googleapis.com/css?family=Merienda:700');
 
-    .header__logo {
-        display: flex;
-
-        .image {
-            align-self: flex-start;
-        }
-    }
-
-    .header {
-        background-color: #5CB85C;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__title {
-            color: #fff;
-            font-family: 'Merienda', cursive;
-        }
-
-
-        &__link {
-            display: block;
-            padding: 1rem;
-
-            &:hover {
-                box-shadow: 0 0 8px 4px #010107b5;
-            }
-        }
-
-    }
-
-    .image {
-        width: 23%;
-
-        & img {
-            max-width: 100%;
-        }
-    }
-
-    .navbar {
-        color: #fff;
-
-        ul, li {
-            list-style: none;
-            margin: 0;
-        }
-
-        &__list {
-            display: flex;
-        }
-
-        &__item {
-            padding: 1.6rem;
-            position: relative;
-        }
-    }
 </style>
 

@@ -3,7 +3,7 @@
         <v-app id="inspire">
             <Head></Head>
             <router-view></router-view>
-            <!-- <home-aside></home-aside> -->
+            <home-aside></home-aside>
             <Foot></Foot>
         </v-app>
     </div>
